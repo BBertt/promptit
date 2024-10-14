@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
-const Form = ({
-  type, post, setPost, submitting, handleSubmit 
-}) => {
+const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
   return (
     <section className='w-full max-w-full flex-start flex-col'>
       <h1 className='head_text text-left'>
@@ -62,13 +60,12 @@ const Form = ({
             disabled={submitting}
             className='px-5 py-1.5 text-sm bg-primary-orange rounded-full text-white'
           >
-            {submitting ? `${type}...`: type}
+            {submitting ? `${type}ing...`: type}
           </button>
         </div>
       </form>
-
     </section>
   )
 }
 
-export default Form
+export default Form;
