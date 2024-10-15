@@ -1,6 +1,8 @@
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt";
 
+export const revalidate = 0; // Disable ISR, always fetch fresh data
+
 export const GET = async (request) => {
     try {
         await connectToDB();
